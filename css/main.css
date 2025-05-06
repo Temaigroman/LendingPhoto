@@ -60,7 +60,7 @@ body {
 }
 
 .main-nav a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     display: block;
 }
