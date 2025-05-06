@@ -1,0 +1,64 @@
+/* Базовые стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header, .footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Сетка на Grid */
+.grid-container {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Адаптация под разные экраны */
+
+/* Мобильные (1 колонка) */
+@media (max-width: 599px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Планшеты (2 колонки) */
+@media (min-width: 600px) and (max-width: 899px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Десктоп (3 колонки) */
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
