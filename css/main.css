@@ -1,42 +1,72 @@
-/* Базовые стили */
+:root {
+    --primary-color: #fdf4e3;
+    --secondary-color: #fae1b3;
+    --text-color: #333;
+}
+
+/* Базовые стили (Mobile First) */
 body {
     margin: 0;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fdf3df;
+    background-color: var(--primary-color);
 }
 
-.header, .footer {
-    background: #333;
+.header {
+    background-color: var(--secondary-color);
     color: white;
-    text-align: center;
     padding: 1rem;
+    position: relative;
+}
+.menu-toggle {
+            display: none; /* Сначала скрываем на десктопе */
+            cursor: pointer;
+            margin-left: auto;
+            padding: 10px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+        }
+
+.menu-toggle {
+    display: block; /* Показываем бургер-меню на мобильных */
 }
 
-.nav {
+.main-nav {
+    display: none; /* По умолчанию скрываем навигацию */
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
+    flex-direction: column;
 }
 
-.nav a {
+.main-nav li {
+    padding: 0.5rem 0;
+}
+
+.main-nav a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
 }
 
-/* Сетка на Grid */
+/* Сетка для мобильных (1 колонка) */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
-    width: 100%; /* Занимает всю доступную ширину */
-    max-width: 1200px; /* Максимальная ширина контейнера */
-    margin-left: 5vw;
     padding: 1rem;
-    box-sizing: border-box; /* Учитывает padding в общей ширине */
-}
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .card {
@@ -46,3 +76,39 @@ body {
     border-radius: 5px;
 }
 
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Планшеты (544px и выше) */
+@media (min-width: 544px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-nav {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Десктопы (992px и выше) */
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .main-nav li {
+        padding: 0 1rem;
+    }
+}

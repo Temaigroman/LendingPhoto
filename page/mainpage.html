@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-     <link rel="stylesheet" href="../css/main.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотограф</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-<!-- Шапка сайта -->
-    <header>
-        <!-- Логотип/название сайта -->
-        <div class="logo">
-            <a href="mainpage.html">логотип</a>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="menu-toggle" id="menuToggle">
+            <span class="menu-icon">☰</span>
         </div>
-
-        <!-- Основная навигация -->
-        <nav class="main-nav">
+        <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="events.html">Мероприятия</a></li>
@@ -24,6 +22,7 @@
             </ul>
         </nav>
     </header>
+    <!-- Карточки фотографий -->
 <main class="grid-container">
         <article class="card">
             <img src="../photos/test.jpg" alt="Описание изображения" width="500">
@@ -115,10 +114,11 @@
         <article class="card">
             <img src="../photos/test.jpg" alt="Описание изображения" width="500">
         </article>
-    </main>
-
-    <footer class="footer">
-        <p>© 2024 Мой сайт. Все права защищены.</p>
-    </footer>
+   <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const nav = document.getElementById('mainNav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>
