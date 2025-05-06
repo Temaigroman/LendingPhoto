@@ -1,8 +1,10 @@
 /* Базовые стили */
 body {
     margin: 0;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #fdf3df;
 }
 
 .header, .footer {
@@ -27,10 +29,14 @@ body {
 /* Сетка на Grid */
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin-left: 5vw;
     padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    box-sizing: border-box; /* Учитывает padding в общей ширине */
+}
 }
 
 .card {
@@ -40,25 +46,3 @@ body {
     border-radius: 5px;
 }
 
-/* Адаптация под разные экраны */
-
-/* Мобильные (1 колонка) */
-@media (max-width: 599px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Планшеты (2 колонки) */
-@media (min-width: 600px) and (max-width: 899px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Десктоп (3 колонки) */
-@media (min-width: 900px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
