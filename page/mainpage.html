@@ -25,100 +25,54 @@
     <!-- Карточки фотографий -->
 <main class="grid-container">
         <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+            <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
         <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
         <article class="card">
-           <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
         <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
     <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
         <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-           <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
     <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
         <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-           <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
     <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
         <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-           <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
     <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
         <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
+             <img src="../photos/test.jpg" alt="Описание изображения" class="gallery-img">
         </article>
-        <article class="card">
-           <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-        <article class="card">
-            <img src="../photos/test.jpg" alt="Описание изображения" width="500">
-        </article>
-   <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            const nav = document.getElementById('mainNav');
-            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-        });
-    </script>
+    </main>
+  <!-- Полноэкранный просмотр -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <div class="lightbox-nav">
+                <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+                <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javaskript/gallery.js"></script>
 </body>
 </html>
