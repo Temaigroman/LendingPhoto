@@ -1,0 +1,66 @@
+/* Контакты */
+.contacts-container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.contacts {
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.contacts h1 {
+    margin-bottom: 20px;
+}
+
+.contacts p {
+    margin-bottom: 15px;
+}
+
+.about-image {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.telegram-link {
+    display: inline-block;
+}
+
+.about-image:hover {
+    transform: scale(1.1);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 543px) {
+    .contacts-container {
+        padding: 0.5rem;
+    }
+
+    .contacts {
+        padding: 15px;
+    }
+
+    .about-image {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.telegram-logo {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.telegram-logo:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,43 @@
+.about-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            min-height: calc(100vh - 60px); /* Высота минус шапка */
+            width: 100%;
+        }
+
+        .about-image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 300px;
+        }
+
+        .about-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Для планшетов и десктопов */
+        @media (min-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-image {
+                min-height: auto;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
